@@ -1,0 +1,12 @@
+# HELP oncall_correlation_alerts_reviewed_total Total alerts reviewed by the correlation engine.
+# TYPE oncall_correlation_alerts_reviewed_total counter
+oncall_correlation_alerts_reviewed_total 5.0
+# HELP oncall_correlation_alerts_reviewed_created Total alerts reviewed by the correlation engine.
+# TYPE oncall_correlation_alerts_reviewed_created gauge
+oncall_correlation_alerts_reviewed_created 1.784741964321588e+09
+# HELP oncall_correlation_incidents Current correlated incident count.
+# TYPE oncall_correlation_incidents gauge
+oncall_correlation_incidents 2.0
+# HELP oncall_correlation_page_worthy_incidents Current page-worthy incident count.
+# TYPE oncall_correlation_page_worthy_incidents gauge
+oncall_correlation_page_worthy_incidents 1.0

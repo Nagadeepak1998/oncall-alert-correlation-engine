@@ -1,0 +1,56 @@
+{
+  "reviewed_alerts": 5,
+  "incident_count": 2,
+  "page_worthy_incidents": 1,
+  "incidents": [
+    {
+      "key": "inc-7863ec05e3",
+      "service": "checkout-api",
+      "severity": "P1",
+      "alert_count": 3,
+      "window_start": "2026-07-22T09:06:00-07:00",
+      "window_end": "2026-07-22T09:14:00-07:00",
+      "owner": "Revenue Platform",
+      "escalation_policy": "rev-platform-primary",
+      "signals": [
+        "5xx_error_rate",
+        "latency_p95"
+      ],
+      "contributing_alert_ids": [
+        "a-001",
+        "a-002",
+        "a-003"
+      ],
+      "recommended_action": "Page Revenue Platform for checkout-api; correlate 5xx_error_rate, latency_p95; verify dependencies payment-gateway, orders-db before mitigation.",
+      "missing_readiness": []
+    },
+    {
+      "key": "inc-0d19f6e6c3",
+      "service": "search-api",
+      "severity": "P3",
+      "alert_count": 2,
+      "window_start": "2026-07-22T09:12:00-07:00",
+      "window_end": "2026-07-22T09:19:00-07:00",
+      "owner": "Search Platform",
+      "escalation_policy": null,
+      "signals": [
+        "latency_p95"
+      ],
+      "contributing_alert_ids": [
+        "a-004",
+        "a-005"
+      ],
+      "recommended_action": "Open a ticket for Search Platform to review search-api signals: latency_p95.",
+      "missing_readiness": [
+        "escalation_policy",
+        "runbook_url"
+      ]
+    }
+  ],
+  "suppressed_alert_ids": [
+    "a-002",
+    "a-003",
+    "a-005"
+  ],
+  "summary": "Reviewed 5 alerts, correlated 2 incidents, and found 1 page-worthy incidents."
+}

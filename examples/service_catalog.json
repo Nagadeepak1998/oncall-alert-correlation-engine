@@ -1,0 +1,22 @@
+{
+  "services": {
+    "checkout-api": {
+      "owner": "Revenue Platform",
+      "tier": "backend",
+      "escalation_policy": "rev-platform-primary",
+      "dependencies": ["payment-gateway", "orders-db"]
+    },
+    "search-api": {
+      "owner": "Search Platform",
+      "tier": "backend",
+      "escalation_policy": null,
+      "dependencies": ["catalog-index"]
+    },
+    "catalog-api": {
+      "owner": "Catalog Platform",
+      "tier": "backend",
+      "escalation_policy": "catalog-platform-primary",
+      "dependencies": ["catalog-cache"]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "alerts": [
+    {
+      "id": "a-001",
+      "service": "checkout-api",
+      "signal": "5xx_error_rate",
+      "severity": "critical",
+      "started_at": "2026-07-22T09:06:00-07:00",
+      "summary": "Checkout 5xx error rate above 7 percent.",
+      "runbook_url": "https://runbooks.example.local/checkout-api",
+      "fingerprint": "checkout-prod-errors"
+    },
+    {
+      "id": "a-002",
+      "service": "checkout-api",
+      "signal": "5xx_error_rate",
+      "severity": "critical",
+      "started_at": "2026-07-22T09:08:00-07:00",
+      "summary": "Payment authorization failures spiking.",
+      "runbook_url": "https://runbooks.example.local/checkout-api",
+      "fingerprint": "checkout-prod-errors"
+    },
+    {
+      "id": "a-003",
+      "service": "checkout-api",
+      "signal": "latency_p95",
+      "severity": "warning",
+      "started_at": "2026-07-22T09:14:00-07:00",
+      "summary": "Checkout p95 latency above target.",
+      "runbook_url": "https://runbooks.example.local/checkout-api",
+      "fingerprint": "checkout-prod-errors"
+    },
+    {
+      "id": "a-004",
+      "service": "search-api",
+      "signal": "latency_p95",
+      "severity": "warning",
+      "started_at": "2026-07-22T09:12:00-07:00",
+      "summary": "Search p95 latency above target.",
+      "runbook_url": null,
+      "fingerprint": "search-prod-latency"
+    },
+    {
+      "id": "a-005",
+      "service": "search-api",
+      "signal": "latency_p95",
+      "severity": "warning",
+      "started_at": "2026-07-22T09:19:00-07:00",
+      "summary": "Search latency still elevated.",
+      "runbook_url": null,
+      "fingerprint": "search-prod-latency"
+    }
+  ]
+}
+

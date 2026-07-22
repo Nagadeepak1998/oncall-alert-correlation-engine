@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: oncall-alert-correlation-engine
+  labels:
+    app: oncall-alert-correlation-engine
+spec:
+  selector:
+    app: oncall-alert-correlation-engine
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8088
+
