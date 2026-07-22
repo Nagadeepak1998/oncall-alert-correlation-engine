@@ -10,3 +10,8 @@ variable "environment" {
   default     = "local"
 }
 
+variable "owner" {
+  type        = string
+  description = "Owning team for the service registration."
+  default     = "platform-reliability"
+}

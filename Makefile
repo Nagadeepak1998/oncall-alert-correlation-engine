@@ -28,7 +28,9 @@ k8s-validate:
 	kubectl kustomize infra/k8s
 
 terraform-fmt:
-	terraform -chdir=infra/terraform fmt -check -recursive
+	terraform -chdir=infra/terraform init -backend=false -input=false
+	terraform -chdir=infra/terraform fmt -check
+	terraform -chdir=infra/terraform validate
 
 docker-build:
 	docker build -f infra/docker/Dockerfile -t oncall-alert-correlation-engine:local .

@@ -3,3 +3,7 @@ output "labels" {
   value       = local.labels
 }
 
+output "service_registration" {
+  description = "Local-only service registration metadata for platform catalog review."
+  value       = terraform_data.service_registration.output
+}
